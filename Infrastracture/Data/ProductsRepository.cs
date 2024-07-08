@@ -18,12 +18,16 @@ namespace Infrastracture.Data
         }
         public async Task<IReadOnlyList<Products>> GetProductsAsync()
         {
-            return await _skinetContext.Products.Include(b => b.productBrand).Include(t => t.ProductType)
+            return await _skinetContext.Products
+                .Include(b => b.productBrand)
+                .Include(t => t.ProductType)
                 .ToListAsync();
         }
         public async Task<Products> GetProductByIDAsync(int id)
         {
-            return await _skinetContext.Products.Include(b => b.productBrand).Include(t => t.ProductType)
+            return await _skinetContext.Products
+                .Include(b => b.productBrand)
+                .Include(t => t.ProductType)
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
         public async Task<IReadOnlyList<ProductType>> GetProductTypesAsync()
