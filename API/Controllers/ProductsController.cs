@@ -8,9 +8,7 @@ using System.Collections.Generic;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class ProductsController : Controller
+    public class ProductsController : BaseAPIController
     {
         private readonly IGenericRepository<Products> _productsRepo;
         private readonly IGenericRepository<productBrand> _productBrandRepo;
