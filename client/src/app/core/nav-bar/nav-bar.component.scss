@@ -9,3 +9,15 @@
     top: -12px;
     right: 32px;
 }
+
+a {
+    text-decoration: none;
+    color: rgb(9, 3, 3);
+    &.active{
+        color: chocolate;
+    }
+}
+
+.logo {
+    cursor: pointer;
+}
