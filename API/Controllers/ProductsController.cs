@@ -53,14 +53,14 @@ namespace API.Controllers
         [HttpGet("types")]
         public async Task<ActionResult<List<Products>>> GetProductTypes()
         {
-            var types = await _productBrandRepo.ListAllAsync();
+            var types = await _productTypeRepo.ListAllAsync();
             return Ok(types);
         }
 
         [HttpGet("brands")]
         public async Task<ActionResult<List<Products>>> GetProductBrands()
         {
-            var brands = await _productTypeRepo.ListAllAsync();
+            var brands = await _productBrandRepo.ListAllAsync();
             return Ok(brands);
         }
     }
