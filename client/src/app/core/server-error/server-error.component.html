@@ -1,0 +1,9 @@
+<div class="container mt-5">
+    <h4>Server Error - will disappear after page refresh</h4>
+    <ng-container *ngIf="error">
+        <h5 class="text-danger">Error: {{error.message}}</h5>
+        <p class="font-weight-bold">This error is from server code not UI code</p>
+        <h5>Stack trace</h5>
+        <code class="mt-5" style="background-color: wheat;">{{error.details}}</code>
+    </ng-container>
+</div>
